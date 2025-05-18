@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'BMSPA';
+    src: url(BMSPA___.TTF);
+}
+
+.logo-fixed {
+  margin-top: 70px;
+  margin-left: 20px;
+  width: 288px;
+  height: 214px;
+}
+
+.background-clip{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BMSPA';
+  font-size: 20px;
+  height: 100vh;
+  background: hsl(249, 20%, 11%);
+  padding: 2px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(249, 20%, 11%);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+main{
+    padding-top: 120px;
+}
+
+nav ul {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fefefe;
+  position: relative;
+  transition: color 0.25s;
+}
+.link:hover {
+  color: black;
+}
+
+.link::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #229cff;
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+}
+.link:hover::after {
+  scale: 1 1;
+}
+
+.story-title {
+    text-align: center;
+    color: #00aeff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 174, 255, 0.5);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
